@@ -37,5 +37,20 @@ urlpatterns = [
         'post/<int:pk>/delete',
         views.post_remove,
         name='post_remove',
+    ),
+    path(
+        'post/<int:pk>/add_comment_to_post',
+        views.add_comment_to_post,
+        name='add_comment_to_post',
+    ),
+    path(
+        'post/<int:pk>/comment_remove',
+        views.comment_remove,
+        name='comment_remove',
+    ),
+    path(
+        'post/<int:pk>/comment_approve',
+        views.comment_approve,
+        name='comment_approve',
     )
 ]
